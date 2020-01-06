@@ -5,15 +5,14 @@ const HtmlWebPackPlugin = require("html-webpack-plugin");
 
 const htmlPlugin = new HtmlWebPackPlugin({
   template: "./src/index.html",
-  filename: "./index.html"
+  filename: "index.html"
 });
 
 module.exports = merge(commen, {
   mode: "development",
-  devtool: "none",
   output: {
-    filename: "[name].bundled.js",
-    path: path.resolve("dist")
+    filename: "index_bundle.js",
+    path: path.resolve(__dirname, "dist")
   },
   plugins: [htmlPlugin],
   module: {
@@ -21,11 +20,11 @@ module.exports = merge(commen, {
       {
         test: /\.scss$/,
         use: [
-          "style-loader",
-          "css-loader",
-          "sass-loader"
+          'style-loader',
+          'css-loader',
+          'sass-loader'
         ]
-      }
+      },
     ]
   }
 });

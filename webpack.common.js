@@ -1,11 +1,8 @@
 const path = require('path');
-
-
+// require('./manifest.json');
 
 module.exports = {
-  entry: {
-    main: "./src/index.js",
-  },
+  entry: "./src/index.js",
   module: {
     rules: [
       {
@@ -20,13 +17,11 @@ module.exports = {
         use: ["html-loader"]
       },
       {
-        test: /\.(svg|png|jpg|gif)$/,
-        use: {
-          options: {
-            name: "[name].[hash].[ext]",
-            outputPath: "imgs"
-          }
-        }
+        test: /\.(png|jpe?g|gif)$/i,
+        loader: 'file-loader',
+        options: {
+          outputPath: 'images',
+        },
       }
     ]
   },

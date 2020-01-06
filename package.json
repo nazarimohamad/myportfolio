@@ -4,7 +4,7 @@
   "private": true,
   "main": "index.js",
   "scripts": {
-    "start": "webpack-dev-server --config webpack.dev.js --open --port 8080",
+    "start": "webpack-dev-server --config webpack.dev.js --open",
     "build": "webpack --config webpack.prod.js"
   },
   "license": "MIT",
@@ -29,7 +29,9 @@
     "webpack-merge": "^4.2.2"
   },
   "dependencies": {
+    "pixi.js": "^5.2.0",
     "react": "^16.12.0",
-    "react-dom": "^16.12.0"
+    "react-dom": "^16.12.0",
+    "react-particles-js": "^2.7.0"
   }
 }

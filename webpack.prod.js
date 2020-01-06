@@ -1,26 +1,42 @@
 const path = require('path');
 const commen = require('./webpack.common');
 const merge = require('webpack-merge');
-const CleanWebpackPlugin = require('clean-webpack-plugin');
+const { CleanWebpackPlugin } = require('clean-webpack-plugin');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const OptimizeCssAssetsPlugin = require('optimize-css-assets-webpack-plugin');
 const TerserPlugin = require('terser-webpack-plugin');
 const HtmlWebPackPlugin = require("html-webpack-plugin");
 
-const htmlPlugin = new HtmlWebPackPlugin({
-  template: "./src/index.html",
-  filename: "./index.html"
-});
+// const htmlPlugin = new HtmlWebPackPlugin({
+//   template: "./src/index.html",
+//   filename: "index.html",
+//   minify: {
+//     removeAttributeQuotes: true,
+//     collapseWhitespace: true,
+//     removeComments: true,
+//   }
+// });
 
 
 module.exports = merge(commen, {
   mode: "production",
   output: {
-    filename: "[name].[contentHash].bundled.js",
-    path: path.resolve("dist")
+    filename: "index_[contentHash].bundle.js",
+    path: path.resolve(__dirname, "dist")
   },
-  optimizations: {
-    minimizer: new OptimizeCssAssetsPlugin(), new TerserPlugin()
+  optimization: {
+    minimizer: [
+      new OptimizeCssAssetsPlugin(),
+      new TerserPlugin(),
+      new HtmlWebpackPlugin({
+        template: "./src/index.html",
+        minify: {
+          removeAttributeQuotes: true,
+          collapseWhitespace: true,
+          removeComments: true
+        }
+      })
+    ]
   },
   plugins: [
     htmlPlugin,
@@ -31,11 +47,11 @@ module.exports = merge(commen, {
     rules: [
       {
         test: /\.scss$/,
-        use: {
+        use: [
           MiniCssExtractPlugin.loader,
           "css-loader",
           "sass-loader"
-        }
+        ]
       }
     ]
   }
