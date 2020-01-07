@@ -1,11 +1,11 @@
 import React, { Component } from 'react';
 import * as PIXI from "pixi.js";
-import mo from '../images/mo2.png';
+import mo from '../images/mo4.png';
 import '../style.scss';
 
 
-const rendererWidth = 930;
-let rendererHeight = 800;
+const rendererWidth = 1020;
+let rendererHeight = 930;
 const frameWidth = 10;
 const frameHeight = 10;
 const frameMargin = 0;

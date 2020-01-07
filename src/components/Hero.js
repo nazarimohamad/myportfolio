@@ -1,5 +1,7 @@
 import React from 'react';
 import Particles from 'react-particles-js';
+import { FaGithub } from 'react-icons/fa';
+import { FaLinkedinIn } from 'react-icons/fa';
 import mo from '../images/mo2.png';
 import '../style.scss';
 
@@ -21,11 +23,14 @@ class Hero extends React.Component {
 
 
   render() {
-    const move = this.state.move;
-    console.log(move)
-    const circleClasses = `circle ${move === true ? 'move' : null}`;
     return (
         <div className="hero">
+          <div className="nav">
+            <ul className="nav-link">
+              <li><FaGithub /></li>
+              <li><FaLinkedinIn /></li>
+            </ul>
+          </div>
           <Particles
             className="particle"
             params={{
@@ -137,7 +142,7 @@ class Hero extends React.Component {
             <a type="button" href={mo} download>Download Resume</a>
           </div>
           <div className="arrow">
-            <div className={circleClasses} ref="circle"/>
+            <div className={`circle ${this.state.move === true ? 'move' : null}`} ref="circle"/>
           </div>
       </div>
     );
