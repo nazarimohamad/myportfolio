@@ -3,6 +3,7 @@ import Particles from 'react-particles-js';
 import { FaGithub } from 'react-icons/fa';
 import { FaLinkedinIn } from 'react-icons/fa';
 import mo from '../images/mo2.png';
+import resume from '../images/resume.jpg';
 import '../style.scss';
 
 
@@ -139,7 +140,7 @@ class Hero extends React.Component {
             }}
           />
           <div className="headline">
-            <a type="button" href={mo} download>See my Resume</a>
+            <a type="button" href={resume} download>See my Resume</a>
           </div>
           <div className="arrow">
             <div className={`circle ${this.state.move === true ? 'move' : null}`} ref="circle"/>
