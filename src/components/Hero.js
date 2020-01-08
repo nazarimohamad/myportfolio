@@ -27,8 +27,8 @@ class Hero extends React.Component {
         <div className="hero">
           <div className="nav">
             <ul className="nav-link">
-              <li><FaGithub /></li>
-              <li><FaLinkedinIn /></li>
+              <li><a href='https://github.com/nazarimohamad'><FaGithub /></a></li>
+              <li><a href='https://www.linkedin.com/in/mohammad-nazari-145529167'><FaLinkedinIn /></a></li>
             </ul>
           </div>
           <Particles
@@ -139,7 +139,7 @@ class Hero extends React.Component {
             }}
           />
           <div className="headline">
-            <a type="button" href={mo} download>Download Resume</a>
+            <a type="button" href={mo} download>See my Resume</a>
           </div>
           <div className="arrow">
             <div className={`circle ${this.state.move === true ? 'move' : null}`} ref="circle"/>
