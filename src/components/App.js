@@ -1,6 +1,8 @@
 import React, { useEffect, useState } from 'react';
 import ReactFullpage from '@fullpage/react-fullpage';
 import Projects from './Projects';
+import About from './About';
+import Samples from './Samples';
 import Main from './Main';
 import '../style.scss';
 
@@ -26,7 +28,10 @@ const App = () => {
               <Main />
             </div>
             <div className="section">
-              <Projects />
+              <About />
+            </div>
+            <div className="section">
+              <Samples />
             </div>
           </ReactFullpage.Wrapper>
         );

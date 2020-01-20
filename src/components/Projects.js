@@ -2,7 +2,7 @@ import React, { useEffect } from 'react';
 import mo from '../images/mo2.png';
 import sublock from '../images/sublock.png';
 import bteks from '../images/bteks.png';
-import profile from '../images/profile1.png';
+import portfolio from '../images/portfolio.png';
 import shoe from '../images/shoe.png';
 import { FaReact, FaHtml5 } from 'react-icons/fa';
 
@@ -62,7 +62,7 @@ export default Projects;
 const aboutMe = "My name is Mohammad Nazari, a Full-stack web developer with industry experience building websites and web applications. I specialize in JavaScript (React for the front-end and Node.js for back-end)."
 
 const data = [
-  {image: profile},
+  {image: portfolio},
   {image: sublock, color: '#162d33', show: 'http://sublock.co', git:'https://github.com/nazarimohamad/sublock'},
   {image: '', top: 'About me', middle: aboutMe, skill:'React, Redux, Vue, MongoDB, Express'},
   {image: bteks, color: '#162d33', show: 'http://bteks.co'},
