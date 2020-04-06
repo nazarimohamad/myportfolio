@@ -12,7 +12,7 @@ export default function About() {
      {img: back, title: 'Back End', tech: ["MongoDB", "Express", "Node", "Python"]},
      {img: front, title: 'Front End', tech: ["React", "Vue", "Redux", "JS(ES6)", "HTML", "S-CSS"]},
      {img: design, title: 'Design', tech: ["Photoshop", "Affinity Photo", "Sketch"]},
-     {img: game, title: 'Hobbies', tech: ["Paragliding", "Mountain Climbing", "‌‌Backgammon"]},
+     {img: game, title: 'Hobbies', tech: ["Paragliding", "‌‌Backgammon", "Mountain Climbing"]},
     ]
 
    const skills = about.map((item, index) => {
