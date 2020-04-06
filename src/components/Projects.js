@@ -65,6 +65,6 @@ const data = [
   {image: portfolio},
   {image: sublock, color: '#162d33', show: 'http://sublock.co', git:'https://github.com/nazarimohamad/sublock'},
   {image: '', top: 'About me', middle: aboutMe, skill:'React, Redux, Vue, MongoDB, Express'},
-  {image: bteks, color: '#162d33', show: 'http://bteks.co'},
+  {image: bteks, color: '#162d33', show: 'http://www.bteks.co/'},
   {image: shoe, color: '#162d33', show: 'https://topshoes.herokuapp.com/', git:'https://github.com/nazarimohamad/ecomerece'},
 ]

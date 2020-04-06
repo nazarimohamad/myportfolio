@@ -1,7 +1,8 @@
-import React from 'react'
-import front from '../images/frontend6.png'
-import back from '../images/backend2.png'
-import design from '../images/design.png'
+import React from 'react';
+import front from '../images/frontend6.png';
+import back from '../images/backend2.png';
+import design from '../images/design.png';
+import game from '../images/game.png';
 
 
 
@@ -11,6 +12,7 @@ export default function About() {
      {img: back, title: 'Back End', tech: ["MongoDB", "Express", "Node", "Python"]},
      {img: front, title: 'Front End', tech: ["React", "Vue", "Redux", "JS(ES6)", "HTML", "S-CSS"]},
      {img: design, title: 'Design', tech: ["Photoshop", "Affinity Photo", "Sketch"]},
+     {img: game, title: 'Hobbies', tech: ["Paragliding", "Mountain Climbing", "‌‌Backgammon"]},
     ]
 
    const skills = about.map((item, index) => {

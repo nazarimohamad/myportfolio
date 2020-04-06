@@ -4,15 +4,16 @@ import bteks from '../images/bteks.png';
 import shoe from '../images/shoe.png';
 import resort from '../images/resort.png';
 import portfolio from '../images/portfolio.png';
+import mobilemarket from '../images/mobilemarket.png';
 
 export default function Samples() {
 
   const items = [
     {img: shoe, title: 'top shoe', github: 'https://github.com/nazarimohamad/ecomerece', view: 'https://topshoes.herokuapp.com/'},
     {img: resort, title: 'shiraz resort', github: 'https://github.com/nazarimohamad/Beach-Resort', view: 'https://shiraz-resort.netlify.com/'},
-    {img: sublock, title: 'sublock', github: 'https://github.com/nazarimohamad/sublock', view: 'http://sublock.co/'},
+    {img: mobilemarket, title: 'sublock', github: 'https://github.com/nazarimohamad/mobile-market', view: 'https://mobilemarket.netlify.com/',},
     {img: portfolio, title: 'portfolio',  github: 'https://github.com/nazarimohamad/myportfolio', view: 'https://nazarimohamad.github.io/myportfolio/'},
-    {img: bteks, title: 'bteks'},
+    {img: bteks, title: 'bteks', view: 'http://www.bteks.co/'},
   ]
 
  const projects = items.map((item, index) => {
